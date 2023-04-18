@@ -1,13 +1,16 @@
-﻿using System.Collections;
-using System.Diagnostics.Contracts;
-using System.Runtime.CompilerServices;
+using CodeDemo;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace CodeDemo
 {
-    public class SingletonDemo : MonoBehaviour
+    public class SimpleGameManager : MonoBehaviour
     {
-        public static SingletonDemo Instance { get; private set; }
+        [field: SerializeField] public GameSettingsSO GameSettings { get; private set; }
+        [field: SerializeField] public SimpleGameData GameData { get; private set; } = new();
+
+        public static SimpleGameManager Instance { get; private set; }
 
         private void Awake()
         {
