@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FailFast : MonoBehaviour
+namespace CodeDemo
 {
-    // Start is called before the first frame update
-    void Start()
+    public class FailFast : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        void Start()
+        {
+            Debug.Log("The Game Started, HOORAY!");
+        }
+    } 
 }
