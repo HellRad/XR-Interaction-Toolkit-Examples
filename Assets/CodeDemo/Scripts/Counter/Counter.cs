@@ -9,6 +9,9 @@ namespace CodeDemo.Counter
     public class Counter : MonoBehaviour
     {
         [SerializeField] VoidEventChannelSO countEvent;
+        [SerializeField] IntEventChannelSO onCounterIncrement;
+
+        private int counter;
 
         private void OnEnable()
         {
@@ -22,7 +25,10 @@ namespace CodeDemo.Counter
 
         void CountUp()
         {
+            counter++;
             Debug.Log("Counted Up");
+
+            onCounterIncrement.RaiseEvent(counter);
         }
     } 
 }

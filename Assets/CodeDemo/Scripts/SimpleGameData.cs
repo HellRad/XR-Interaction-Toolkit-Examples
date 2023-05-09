@@ -3,7 +3,7 @@ using System;
 namespace CodeDemo
 {
     [Serializable]
-    public class SimpleGameData
+    public struct SimpleGameData
     {
         public bool reachedBoss;
         public int points;
