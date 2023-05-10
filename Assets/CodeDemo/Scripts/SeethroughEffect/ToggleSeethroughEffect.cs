@@ -11,6 +11,7 @@ namespace CodeDemo
     {
         [SerializeField] RenderObjects renderObjectsFeature;
         [SerializeField] InputActionReference toggleActionRef;
+        //private bool triggered;
 
         void Awake()
         {
@@ -21,6 +22,24 @@ namespace CodeDemo
         {
             toggleActionRef.action.performed -= Action_performed;
         }
+
+        /*
+        private void Update()
+        {
+            float val = toggleActionRef.action.ReadValue<float>();
+
+            if (val > 0 && !triggered)
+            {
+                Debug.Log("executed");
+                Toggle();
+                triggered = true;
+            }
+            else
+            {
+                triggered = false;
+            }
+        }
+        */
 
         void Action_performed(InputAction.CallbackContext context)
         {

@@ -4,7 +4,7 @@ public class SimpleEnumStateMachine
 {
     public enum State
     { 
-        NULL,
+        NONE,
         Start,
         End
     }
@@ -28,12 +28,13 @@ public class SimpleEnumStateMachine
 
         switch (newState)
         {
-            case State.NULL:
+            case State.NONE:
                 break;
             case State.Start:
                 OnStart();
                 break;
             case State.End:
+                //do stuff here
                 break;
         }
     }

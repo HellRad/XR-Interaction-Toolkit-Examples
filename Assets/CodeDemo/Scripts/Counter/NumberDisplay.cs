@@ -21,7 +21,7 @@ namespace CodeDemo
             onCounterIncrement.OnEventRaised -= UpdateText;
         }
 
-        void UpdateText(int value)
+        public void UpdateText(int value)
         {
             tmpText.text = value.ToString();
         }

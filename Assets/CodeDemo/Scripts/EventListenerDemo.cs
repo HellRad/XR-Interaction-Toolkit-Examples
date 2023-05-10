@@ -12,6 +12,8 @@ public class EventListenerDemo : MonoBehaviour
     [SerializeField] Material hoverMaterial;
     [SerializeField] XRGrabInteractable grabInteractable;
     [SerializeField] VoidEventChannelSO voidEventChannelSO;
+    [SerializeField] NumberDisplay numberDisplay;
+    int counter;
 
     //When on he same game object and or will never be disabled or spawned or deleted
     void Awake()
@@ -37,5 +39,7 @@ public class EventListenerDemo : MonoBehaviour
     {
         Debug.Log("hovered over: " + args.interactableObject.transform.gameObject.name);
         voidEventChannelSO.RaiseEvent();
+        //counter++;
+        //numberDisplay.UpdateText(counter);
     }
 }
