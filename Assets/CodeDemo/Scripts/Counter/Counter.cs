@@ -29,6 +29,14 @@ namespace CodeDemo.Counter
             Debug.Log("Counted Up");
 
             onCounterIncrement.RaiseEvent(counter);
+
+            if (counter == 10)
+            {
+                if (GameManager.Instance.CurrentState == GameStates.GameOver)
+                {
+
+                }
+            }
         }
     } 
 }
